@@ -1,0 +1,193 @@
+@import "../../assets/mixins";
+
+.intro {
+  position: relative;
+
+  min-height: 100vh;
+  padding: 16px 0;
+
+  @include onDesktop {
+    padding: 24px 0;
+  }
+
+  &__front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 333px;
+
+    @include onTablet {
+      width: 568px;
+    }
+
+    @include onDesktop {
+      width: 727px;
+    }
+
+    @include onWideDesktop {
+      width: 1024px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 auto;
+    width: fit-content;
+
+    img {
+      filter: blur(38px);
+      height: 294px;
+
+      @include onTablet {
+        height: 482px;
+      }
+
+      @include onWideDesktop {
+        height: auto;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 30%;
+    z-index: 2;
+
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #373737;
+
+    transition: transform 0.3s;
+
+    @include onTablet {
+      font-size: 58px;
+    }
+
+    @include onDesktop {
+      font-size: 58px;
+    }
+
+    @include onWideDesktop {
+      font-size: 82px;
+    }
+  }
+
+  &__horizontal-link {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+
+    display: none;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    text-decoration: none;
+
+    color: #373737;
+
+    transition: color 0.3s;
+
+    @include onTablet {
+      display: block;
+    }
+
+    @include onWideDesktop {
+      font-size: 16px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0px;
+      height: 1px;
+
+      background-color: white;
+
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    &:hover::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+
+      background-color: white;
+    }
+
+    &--left {
+      left: -24px;
+
+      transform: rotate(-90deg) translateX(50%);
+    }
+
+    &--right {
+      right: -24px;
+
+      transform: rotate(90deg) translateX(-50%);
+    }
+  }
+
+  &__vertical-link {
+    position: absolute;
+    bottom: 24px;
+
+    display: none;
+    margin-left: 50%;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    color: #373737;
+
+    transform: translateX(-50%);
+
+    text-decoration: none;
+
+    @include onTablet {
+      display: block;
+    }
+
+    @include onWideDesktop {
+      font-size: 16px;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+      width: 0px;
+      height: 1px;
+
+      background-color: white;
+
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    &:hover::after {
+      content: "";
+
+      width: 100%;
+      height: 1px;
+    }
+  }
+}

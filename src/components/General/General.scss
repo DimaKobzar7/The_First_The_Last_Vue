@@ -1,0 +1,34 @@
+@import "../../assets/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Grtsk Giga";
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.section {
+  background-color: #bebebe;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1440px;
+
+  @include onTablet {
+    padding: 0 24px;
+  }
+}
+
+.hamburger-menu {
+  visibility: visible;
+
+  @include onTablet {
+    visibility: hidden;
+  }
+}
