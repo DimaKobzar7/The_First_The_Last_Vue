@@ -1,14 +1,11 @@
-# vue-project
+#The First The Last
 
-This template should help get you started developing with Vue 3 in Vite.
+[Preview](https://dimakobzar7.github.io/The_First_The_Last_Vue/)
 
-## Recommended IDE Setup
+Technology stack: Vue.js, JavaScript, CSS, SCSS, HTML
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[Design](https://www.figma.com/file/V54u1MVkYtJZEAROURzh42/Test?node-id=0%3A1)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -28,8 +25,3 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
